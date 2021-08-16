@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes(['register' => false]);
+
+Route::get('/home', [App\Http\Controllers\YouthController::class, 'index'])->name('home');
+Route::resource('youth', \App\Http\Controllers\YouthController::class);
+Route::resource('profile',\App\Http\Controllers\Profile::class);
+Route::resource('ward',\App\Http\Controllers\WardController::class);
+Route::get('download/{id}',[\App\Http\Controllers\YouthController::class, 'download'])->name('download');
