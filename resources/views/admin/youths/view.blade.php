@@ -88,18 +88,21 @@
                                 <td>{{ $youth->drug_abuse ?? "N/A" }}</td>
                             </tr>
                             <tr>
-                                <td><b>Next of kin names</b> : {{ $youth->next_of_kin_names }}</td>
+                                <td><b>Next of kin names</b></td>
+                                <td>{{ $youth->next_of_kin_names }}</td>
                             </tr>
                             <tr>
-                                <td><b>Next of kin relationship</b> : {{ $youth->next_of_kin_relationship }}</td>
+                                <td><b>Next of kin relationship</b></td>
+                                <td>{{ $youth->next_of_kin_relationship }}</td>
                             </tr>
                             <tr>
-                                <td><b>Next of kin contacts</b> : {{ $youth->next_of_kin_contacts }}</td>
+                                <td><b>Next of kin contacts</b></td>
+                                <td>{{ $youth->next_of_kin_contacts }}</td>
                             </tr>
                             <tr>
                                 <td><b>Resume/CV</b></td>
                                 <td>
-                                    <a href="{{ route('download', $youth->id) }}" class="btn btn-info"><span class="fa fa-file"></span> Download</a>
+                                    <a href="{{ route('download', $youth->resume) }}" target="_blank" class="btn btn-info"><span class="fa fa-file"></span> Download</a>
                                 </td>
                             </tr>
                         </table>

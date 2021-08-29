@@ -54,16 +54,7 @@
                             <div class="box-body">
                                 @include('includes.messages')
                                 <div class="col-md-offset-3 col-md-6">
-                                    <div class="form-group">
-                                        <img src="{{ Storage::url($user->avatar) }}" class="img-circle" alt="User Image" id="preview" height="100px" width="100px" onchange="previewImage(this)">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="file">
-                                            <label for="avatar" class="btn bg-navy btn-flat"><span class="fa fa-upload"></span>   Browse avatar</label>
-                                            <input type="file" name="avatar" accept="image/*" class="form-control" id="avatar">
-                                        </div>
-                                    </div>
+                                 
 
                                     <div class="form-group">
                                         <label for="name">Name</label>

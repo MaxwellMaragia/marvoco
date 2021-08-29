@@ -14,10 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [App\Http\Controllers\FrontendController::class, 'personal_registration']);
+Route::post('/', [App\Http\Controllers\FrontendController::class, 'store'])->name('save');
 Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\YouthController::class, 'index'])->name('home');

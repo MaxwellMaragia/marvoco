@@ -70,7 +70,7 @@ class Profile extends Controller
         $this->validate($request,[
             'name' => ['required', 'string', 'max:255'],
             'password' => ['confirmed'],
-            'avatar' => ['image','mimes:jpeg,png,jpg,gif,svg','max:5048']
+        
         ]);
 
 
@@ -85,10 +85,7 @@ class Profile extends Controller
         {
             $user->password = Hash::make($request->password);
         }
-        if($request->hasFile('avatar'))
-        {
-            $user->avatar = $request->avatar->store('public/files/profile');
-        }
+       
 
         $user->save();
 

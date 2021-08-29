@@ -24,7 +24,7 @@
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="{{ Storage::url(Auth::user()->avatar) }}" class="img-circle" alt="User Image">
+                <img src="{{ asset('avatar.png') }}" class="img-circle" alt="User Image">
 
                 <p>
                   {{ Auth::user()->name }}
