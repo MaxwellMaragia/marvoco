@@ -20,14 +20,14 @@ class FrontendController extends Controller
         $this->validate($request,[
             'resume' => 'required|mimes:pdf|max:5048',
             'names' => 'required',
-            'identification'=>'required|unique:youths',
+            'identification'=>'required|unique:categories',
             'mobile' => 'required|max:12|min:10',
             'ward' => 'required',
             'next_of_kin_names' => 'required',
             'next_of_kin_contacts' => 'required',
             'gender' => 'required',
             'dob' => 'required',
-            'email' => 'required|unique:youths',
+            'email' => 'required|unique:categories',
             'physical_address' => 'required',
             'next_of_kin_relationship' => 'required'
 
@@ -50,7 +50,7 @@ class FrontendController extends Controller
         $youth->health_condition = $request->health;
         $youth->status = 0;
         // $youth->resume = $request->resume->store('public/files/resumes');
-        
+
         $request->file('resume')->storeAs('files/resumes', $request->names.' CV.pdf');
         $path = $request->names." CV.pdf";
         $youth->resume = $path;

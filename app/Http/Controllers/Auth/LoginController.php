@@ -27,7 +27,7 @@ class LoginController extends Controller
      * @var string
      */
     public function authenticated(){
-        return redirect('/home');
+        return redirect('/dashboard');
     }
 
     /**

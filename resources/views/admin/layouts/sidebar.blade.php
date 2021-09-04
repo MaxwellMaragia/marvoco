@@ -17,29 +17,26 @@
           <li class="header">MAIN NAVIGATION</li>
 
           {{--<li><a href="{{ route('role.index') }}"><i class="fa fa-circle-o text-aqua"></i> <span>Roles</span></a></li>--}}
+          <li><a href="{{ route('home') }}"><i class="fa fa-dashboard text-aqua"></i> <span>Dashboard</span></a></li>
+          <li><a href="{{ route('categories.index') }}"><i class="fa fa-gear text-aqua"></i> <span>Categories</span></a></li>
+          <li><a href="{{ route('products.index') }}"><i class="fa fa-users text-aqua"></i> <span>Premier products</span></a></li>
+          <li><a href="{{ route('chemicals.index') }}"><i class="fa fa-users text-aqua"></i> <span>Chemicals</span></a></li>
+          <li><a href="{{ route('posts.index') }}"><i class="fa fa-rss text-aqua"></i> <span>Posts</span></a></li>
+          <li class="treeview" style="height: auto;">
+              <a href="#">
+                  <i class="fa fa-laptop"></i>
+                  <span>Website data</span>
+                  <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+              </a>
+              <ul class="treeview-menu" style="display: none;">
+                  <li><a href="{{ route('banner.index') }}"><i class="fa fa-circle-o"></i>Banners</a></li>
+                  <li><a href="{{ route('deliverables.index') }}"><i class="fa fa-circle-o"></i>Deliverables</a></li>
+                  <li><a href="{{ route('brands.index') }}"><i class="fa fa-circle-o"></i>Brands</a></li>
+                  <li><a href="{{ route('reviews.index') }}"><i class="fa fa-circle-o"></i>Reviews</a></li>
+                  <li><a href="https://codeisystems.co.ke/admin/portfolios"><i class="fa fa-circle-o"></i>Settings</a></li>
 
-          <li class="treeview">
-              <a href="#">
-                  <i class="fa fa-users"></i> <span>Youths</span>
-                  <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-              </a>
-              <ul class="treeview-menu">
-                  <li><a href="{{ route('youth.create') }}"><i class="fa fa-circle-o"></i> Create</a></li>
-                  <li><a href="{{ route('home') }}"><i class="fa fa-circle-o"></i> View all</a></li>
-              </ul>
-          </li>
-          <li class="treeview">
-              <a href="#">
-                  <i class="fa fa-map-marker"></i> <span>Wards</span>
-                  <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-              </a>
-              <ul class="treeview-menu">
-                  <li><a href="{{ route('ward.create') }}"><i class="fa fa-circle-o"></i> Create</a></li>
-                  <li><a href="{{ route('ward.index') }}"><i class="fa fa-circle-o"></i> View all</a></li>
               </ul>
           </li>
 
