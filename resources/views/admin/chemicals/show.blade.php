@@ -34,7 +34,7 @@
                                 <thead>
                                 <tr>
                                     <th>S.no</th>
-                                    <th>Product chemicals</th>
+                                    <th>Product category</th>
                                     <th>Product name</th>
                                     <th>Specification</th>
                                     <th>Packaging</th>
@@ -46,18 +46,18 @@
                                 @foreach($chemicals as $chemical)
                                     <tr>
                                         <td>{{ $loop->index + 1 }}</td>
-                                        <td><strong>{{ $chemical->category }}</strong></td>
+                                        <td><strong>{{ $chemical->chemical_category->name }}</strong></td>
                                         <td>{{ $chemical->product }}</td>
                                         <td>{{ $chemical->specification }}</td>
                                         <td>{{ $chemical->packaging }}</td>
                                         <td>{{ $chemical->cas }}</td>
                                         <td>
                                             <a data-toggle="tooltip" data-placement="bottom" title="Edit"
-                                               href="{{ route('chemicals.edit',$chemicals->id) }}"
+                                               href="{{ route('chemicals.edit',$chemical->id) }}"
                                                class="badge bg-light-blue " disabled><i class="fa fa-pencil-square-o"
                                                                                         aria-hidden="true"></i></a>
-                                            <form id="delete-form-{{ $chemicals->id }}"
-                                                  action="{{ route('chemicals.destroy',$chemicals->id) }}"
+                                            <form id="delete-form-{{ $chemical->id }}"
+                                                  action="{{ route('chemicals.destroy',$chemical->id) }}"
                                                   style="display: none;" method="post">
                                                 {{@csrf_field()}}
                                                 {{@method_field('DELETE')}}
@@ -65,7 +65,7 @@
                                             <a data-toggle="tooltip" data-placement="bottom" title="Delete" onclick="
                                                 if(confirm('Are you sure you want to delete this chemicals?'))
                                                 {event.preventDefault();
-                                                document.getElementById('delete-form-{{ $chemicals->id }}').submit();
+                                                document.getElementById('delete-form-{{ $chemical->id }}').submit();
                                                 }
                                                 else{
                                                 event.preventDefault();
@@ -79,7 +79,7 @@
                                 <tfoot>
                                 <tr>
                                     <th>S.no</th>
-                                    <th>Product chemicals</th>
+                                    <th>Product category</th>
                                     <th>Product name</th>
                                     <th>Specification</th>
                                     <th>Packaging</th>

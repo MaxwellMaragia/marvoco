@@ -67,7 +67,7 @@
 
                                     <div class="form-group">
                                         <label for="slug">Client name</label>
-                                        <input type="text" class="form-control" id="slug" name="name" placeholder="eg Margaret Wambui" required="required" value="{{ old('name') }}">
+                                        <input type="text" class="form-control" id="slug" name="names" placeholder="eg Margaret Wambui" required="required" value="{{ old('name') }}">
                                     </div>
 
                                     <div class="form-group">

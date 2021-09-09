@@ -51,12 +51,22 @@ class ChemicalsController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $chemical = Chemical::find($id);
+        $chemical->category = $request->category;
+        $chemical->product = $request->product;
+        $chemical->specification = $request->specification;
+        $chemical->packaging = $request->packaging;
+        $chemical->cas = $request->cas;
+
+        $chemical->save();
+        return redirect()->back()->with('success','Chemical updated successfully');
     }
 
 
     public function destroy($id)
     {
         //
+        Chemical::where('id',$id)->delete();
+        return redirect()->back()->with('success','Chemical deleted');
     }
 }

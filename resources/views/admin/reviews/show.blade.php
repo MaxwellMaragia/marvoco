@@ -44,8 +44,8 @@
                                 <tr>
                                     <td>{{ $loop->index + 1 }}</td>
                                     <td><img src="{{ Storage::url($review->avatar) }}" height="50px" width="50px" class="img-circle"></td>
-                                    <td>{{ $review->name }}</td>
-                                    <td>{{ $review->content }}</td>
+                                    <td>{{ $review->names }}</td>
+                                    <td>{{ $review->review }}</td>
                                     <td>
                                         @if($review->status === 1)
                                             <span class="badge bg-green">Yes</span>

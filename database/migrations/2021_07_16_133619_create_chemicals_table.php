@@ -15,12 +15,13 @@ class CreateChemicalsTable extends Migration
     {
         Schema::create('chemicals', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
+            $table->unsignedBigInteger('category')->index();
             $table->string('product');
             $table->string('specification');
             $table->string('packaging');
             $table->string('cas');
             $table->timestamps();
+            $table->foreign('category')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 

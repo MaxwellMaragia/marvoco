@@ -55,11 +55,11 @@
                         <div class="box-body">
                             @include('includes.messages')
                             <div class="col-md-offset-3 col-md-6">
-                                <div class="form-group text-center">
+                                <div class="form-group">
                                     <img src="{{ Storage::url($review->avatar) }}"  alt="User Image" id="preview" height="100px" width="100px" onchange="previewImage(this)" class="img-circle">
                                 </div>
 
-                                <div class="form-group text-center">
+                                <div class="form-group">
                                     <div class="file">
                                         <label for="avatar" class="btn bg-navy btn-flat"><span class="fa fa-upload"></span> Select avatar</label>
                                         <input type="file" name="avatar" accept="image/*" class="form-control" id="avatar">
@@ -68,13 +68,13 @@
 
                                 <div class="form-group">
                                     <label for="slug">Client name</label>
-                                    <input type="text" class="form-control" id="slug" name="name" placeholder="eg Margaret Wambui" required="required" value="{{ $review->name }}">
+                                    <input type="text" class="form-control" id="slug" name="names" placeholder="eg Margaret Wambui" required="required" value="{{ $review->names }}">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="name">Review</label>
                                     <textarea class="form-control" rows="3" placeholder="Write short description...." name="review">
-                                            {{ $review->content }}
+                                            {{ $review->review }}
                                         </textarea>
                                 </div>
 

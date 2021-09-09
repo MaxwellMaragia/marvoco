@@ -31,11 +31,11 @@ class ReviewsController extends Controller
         $this->validate($request,[
             'avatar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'review' => 'required',
-            'name'=>'required|unique:reviews',
+            'names'=>'required|unique:reviews',
         ]);
 
         $review = new Review();
-        $review->name = $request->name;
+        $review->names = $request->names;
         $review->review = $request->review;
         $review->status = $request->status;
 
@@ -68,12 +68,12 @@ class ReviewsController extends Controller
         $this->validate($request,[
             'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'review' => 'required',
-            'name'=>'required',
+            'names'=>'required',
 
         ]);
 
         $review = Review::find($id);
-        $review->name = $request->name;
+        $review->names = $request->names;
         $review->review = $request->review;
         $review->status = $request->status;
 

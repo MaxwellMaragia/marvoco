@@ -42,7 +42,7 @@
                                         <select name="category" id="category" class="form-control" required="required">
                                             <option value="">Select category</option>
                                             @foreach($categories as $category)
-                                                <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
                                                 @endforeach
                                         </select>
                                     </div>
@@ -90,31 +90,5 @@
     <!-- /.content-wrapper -->
 
     @endsection
-@section('footerSection')
-    <!-- CK Editor -->
-    <script src="{{ asset('admin/bower_components/ckeditor/ckeditor.js') }}"></script>
-    <!-- Bootstrap WYSIHTML5 -->
-    <script src="{{ asset('admin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
-    <script>
-        $(function () {
-            // Replace the <textarea id="editor1"> with a CKEditor
-            // instance, using default configuration.
-            CKEDITOR.replace('editor1')
-            //bootstrap WYSIHTML5 - text editor
-            $('.textarea').wysihtml5()
-        })
 
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#preview').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-        $("#avatar").change(function(){
-            readURL(this);
-        });
-    </script>
-@endsection
+
