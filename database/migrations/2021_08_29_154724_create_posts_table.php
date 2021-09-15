@@ -19,15 +19,7 @@ class CreatePostsTable extends Migration
             $table->longText('subtitle');
             $table->string('slug',100);
             $table->longText('body');
-            $table->longText('keywords');
             $table->boolean('status')->nullable()->default('0');
-            $table->boolean('featured')->nullable()->default('0');
-            $table->string('image')->nullable();
-            $table->string('feature_image')->nullable();
-            $table->string('meta_author')->nullable();
-            $table->string('meta_title')->nullable();
-            $table->string('meta_description')->nullable();
-            $table->string('meta_keywords')->nullable();
             $table->timestamps();
         });
     }

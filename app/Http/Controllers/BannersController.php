@@ -85,7 +85,7 @@ class BannersController extends Controller
             $imageName = $request->image->store('public/banners');
         }
 
-        $banner = new Banner;
+        $banner = Banner::find($id);
         $banner->image = $imageName;
         $banner->title_top = $request->title_top;
         $banner->title_bottom = $request->title_bottom;

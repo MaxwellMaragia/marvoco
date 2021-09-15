@@ -1,5 +1,5 @@
 <!--  FAVICON  -->
-<link rel="shortcut icon" href="img/master/favicon.png">
+<link rel="shortcut icon" href="{{ Storage::url($favicon->value) }}">
 
 <!-- BOOTSTRAP FRAMEWORK STYLES -->
 <link rel="stylesheet" href="{{ asset('theme/css/bootstrap.min.css') }}">

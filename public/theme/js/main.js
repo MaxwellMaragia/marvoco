@@ -18,7 +18,7 @@
     9. Youtube Popup
     10. Counter
     11. Counter Up
-    12. Imager hover Movement 
+    12. Imager hover Movement
     13. Filter Gallery
     14. Masonry Gallery Loader
     15. Contact Form
@@ -29,7 +29,7 @@
     19. Projects Carousel
     20. Welding Carousel
     21. Contact Form
-    
+
   ================================================== */
 
 
@@ -39,9 +39,9 @@
 
 jQuery(document).ready(function(){
 	"use strict";
-	
+
 	// here all ready functions
-	
+
 	loader();
 	scroll_top();
     counter_up();
@@ -82,7 +82,7 @@ function scroll_top(){
 
 	$(window).scroll(function(){
 		( $(this).scrollTop() > offset ) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-		if( $(this).scrollTop() > offset_opacity ) { 
+		if( $(this).scrollTop() > offset_opacity ) {
 			$back_to_top.addClass('cd-fade-out');
 		}
 	});
@@ -125,7 +125,7 @@ function accordion(){
 /* ===============================================
     4. Team Carousel - This is used for the team carousel
    =============================================== */
-function team_carousel(){ 
+function team_carousel(){
     $('.team-carousel').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -150,7 +150,7 @@ function team_carousel(){
 /* ===============================================
     5. Clients Carousel - This is used for the clients carousel
    =============================================== */
-function clients_carousel(){ 
+function clients_carousel(){
     $('.clients-carousel').slick({
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -181,7 +181,7 @@ function clients_carousel(){
 /* ===============================================
     6. Testimonials Carousel - This is used for the testimonial slider
    =============================================== */
-function testimonial_slider(){ 
+function testimonial_slider(){
     $("#testimonial-slider").owlCarousel({
         items:1,
         itemsDesktop:[1000,1],
@@ -198,7 +198,7 @@ function testimonial_slider(){
 /* ===============================================
     7. Gallery Carousel - This is used for the gallery carousel
    =============================================== */
-function gallery_carousel(){ 
+function gallery_carousel(){
     $('.gallery-carousel').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
@@ -227,12 +227,12 @@ function gallery_carousel(){
 function magnific_popup(){
     $('.image-popup-vertical-fit').magnificPopup({
         type: 'image',
-        mainClass: 'mfp-with-zoom', 
+        mainClass: 'mfp-with-zoom',
         gallery:{
         enabled:true
      },
         zoom: {
-        enabled: true, 
+        enabled: true,
 
         duration: 300, // duration of the effect, in milliseconds
         easing: 'ease-in-out', // CSS transition easing function
@@ -242,14 +242,14 @@ function magnific_popup(){
           return openerElement.is('img') ? openerElement : openerElement.find('img');
       }
     }
-    });  
+    });
 };
 
 /* ===============================================
     9. Youtube Popup - This is used for the youtube video popup
    =============================================== */
 
-function video_popup(){    
+function video_popup(){
   var $btnLoadMore = $(
     '<div class="btn-wrapper text-center"><a href="#" class="btn load-more">Load More</a></div>'
   );
@@ -276,7 +276,7 @@ function video_popup(){
           }
         });
   }
-  
+
   function loadMoreNews() {
     var end = current + slice;
     if (end >= count) {
@@ -318,7 +318,7 @@ function video_popup(){
 
   //init load
   loadMoreNews();
- }; 
+ };
 
 /* ===============================================
     10. Counter - This is used for the counter section
@@ -449,7 +449,7 @@ function counter_up(){
     };
 
 (jQuery);
-    
+
 };
 
 /* ===============================================
@@ -524,7 +524,7 @@ var $grid = $('.grid').imagesLoaded( function() {
     itemSelector: '.grid-box',
     percentPosition: true,
     columnWidth: '.grid-sizer'
-  }); 
+  });
 });
 
 
@@ -607,7 +607,7 @@ function grid_carousel_alt(){
  };
 
 /* ===============================================
-    18. News Carousel - This is used on the blog news at the template pages bottom
+    18. News Carousel - This is used on the post news at the template pages bottom
    =============================================== */
 function news_carousel_alt(){
     $('.news-carousel').slick({

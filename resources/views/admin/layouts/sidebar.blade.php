@@ -21,7 +21,7 @@
           <li><a href="{{ route('categories.index') }}"><i class="fa fa-gear text-aqua"></i> <span>Categories</span></a></li>
           <li><a href="{{ route('products.index') }}"><i class="fa fa-users text-aqua"></i> <span>Premier products</span></a></li>
           <li><a href="{{ route('chemicals.index') }}"><i class="fa fa-users text-aqua"></i> <span>Chemicals</span></a></li>
-          <li><a href="{{ route('posts.index') }}"><i class="fa fa-rss text-aqua"></i> <span>Posts</span></a></li>
+          <li><a href="{{ route('post.index') }}"><i class="fa fa-rss text-aqua"></i> <span>Posts</span></a></li>
           <li class="treeview" style="height: auto;">
               <a href="#">
                   <i class="fa fa-laptop"></i>
@@ -35,7 +35,9 @@
                   <li><a href="{{ route('deliverables.index') }}"><i class="fa fa-circle-o"></i>Deliverables</a></li>
                   <li><a href="{{ route('brands.index') }}"><i class="fa fa-circle-o"></i>Brands</a></li>
                   <li><a href="{{ route('reviews.index') }}"><i class="fa fa-circle-o"></i>Reviews</a></li>
-                  <li><a href="https://codeisystems.co.ke/admin/portfolios"><i class="fa fa-circle-o"></i>Settings</a></li>
+                  <li><a href="{{ route('about.index') }}"><i class="fa fa-circle-o"></i>About us page</a></li>
+                  <li><a href="{{ route('contacts.index') }}"><i class="fa fa-circle-o"></i>Contacts</a></li>
+                  <li><a href="{{ route('settings.index') }}"><i class="fa fa-circle-o"></i>General Settings</a></li>
 
               </ul>
           </li>
